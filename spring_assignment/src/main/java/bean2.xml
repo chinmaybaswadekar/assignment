@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ 
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!-- <context:annotation-config /> -->
+	<bean id="que12a" class="spring_evln_a.Question_12_employee">
+		<property name="ename" value="chinamy"></property>
+		<property name="salary" value="30000"></property>
+		<property name="dept" value="development"></property>
+	</bean>
+	<bean id="que12b" class="spring_evln_a.Question_12_employee">
+		<property name="ename" value="ashsih"></property>
+		<property name="salary" value="32000"></property>
+		<property name="dept" value="development"></property>
+	</bean>
+
+	<bean id="que12c" class="spring_evln_a.Question_12_employee">
+		<property name="ename" value="prasthmesh"></property>
+		<property name="salary" value="34000"></property>
+		<property name="dept" value="h.r"></property>
+	</bean>
+	<bean id="que12d" class="spring_evln_a.Question_12_employee">
+		<property name="ename" value="sanjeevani"></property>
+		<property name="salary" value="36000"></property>
+		<property name="dept" value="h.r"></property>
+	</bean>
+
+	<bean id="CustID" class="spring_evln_a.Question_13">
+		<property name="moviename" value="vikram"></property>
+		<property name="showtime" value="11-2"></property>
+		<property name="priceofticket" value="100"></property>
+		<property name="businessincrore" value="900 crore"></property>
+	</bean>
+
+	<bean id="que8" class="spring_evln_a.Question_8">
+		<property name="item">
+			<list>
+				<value>bag</value>
+				<value>bottle</value>
+				<value>mobile</value>
+
+			</list>
+		</property>
+	</bean>
+       
+       <bean id="ok" class="spring_evln_a.Question_9">
+       <constructor-arg value="udgir"></constructor-arg>
+       <constructor-arg value="nanded"></constructor-arg>
+       <constructor-arg value="115.78"></constructor-arg>
+       </bean>
+       
+       <bean id="pp" class="spring_evln_a.Question_9">
+       <constructor-arg value="latur"></constructor-arg>
+       <constructor-arg value="pune"></constructor-arg>
+       <constructor-arg value="389.78"></constructor-arg>
+       </bean>
+       
+       <bean id="rr" class="spring_evln_a.Question_9">
+       <constructor-arg value=""></constructor-arg>
+       <constructor-arg value="nanded"></constructor-arg>
+       <constructor-arg value="115.78"></constructor-arg>
+       </bean>
+
+</beans>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ 
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<!-- 	<context:annotation-config /> -->
+
+
+	<bean id="ib" class="spring_evln_a.Quest_3">
+		<property name="rate" value="7.7"></property>
+	</bean>
+
+	<bean id="dp" class="spring_evln_a.departmentQ4">
+		<property name="dpt" value=" testng"></property>
+		<property name="sal" value=" 100000"></property>
+
+	</bean>
+	<bean id="ap" class="spring_evln_a.Question_4Employee" autowire="byName">
+		<property name="id" value=" 101"></property>
+		<property name="name" value=" sunil kumar"></property>
+
+	</bean>
+
+	<bean id="ibean" class="spring_evln_a.Question_2">
+
+		<property name="no1" value="40"></property>
+		<property name="no2" value="50"></property>
+		<property name="no3" value="60"></property>
+		<property name="no4" value="70"></property>
+		<property name="no5" value="80"></property>
+
+		<property name="no6" value="90"></property>
+	</bean>
+
+
+
+	<bean id="que" class="spring_evln_a.Quest_6">
+		<property name="str">
+			<array>
+				<value>chinmay</value>
+				<value>om</value>
+				<value>bhushan</value>
+
+			</array>
+
+		</property>
+	</bean>
+
+	
+	
+	<bean id="CustID"
+        class="spring_evln_a.customer">
+        <property name="id" value="1"></property>
+        <property name="custname" value="Nikhil"></property>  
+        <property name="iteam" ref="IteamID"/>
+    </bean>
+	 <bean id="IteamID"
+        class="spring_evln_a.Quest_15_item">
+        <property name="id" value="2"></property>
+        <property name="iname" value="shirt"></property>
+        <property name="price" value="400"></property>
+        <property name="cat" ref="CatID"/>
+    </bean>
+	<bean id="CatID"
+        class="spring_evln_a.Category">
+        
+        <property name="catagaryname" value="Cloth"></property>  
+    </bean>
+
+	<bean id="ar" class="spring_evln_a.Quest_14_circle">
+	<property name="pi" value="3.14"></property>
+        <property name="radious" value="5"></property>
+	</bean>
+	<bean id="ra" class="spring_evln_a.Quetsion_14_rect">
+	<property name="length" value="6"></property>
+        <property name="breadth" value="6"></property>
+        </bean>
+	<bean id="sa" class="spring_evln_a.Question_14_square">
+	<property name="side1" value="5"></property>
+        <property name="side2" value="5"></property>
+        </bean>
+        
+        <bean id="que1" class="spring_evln_a.Question_1"
+		factory-method="getObjA"></bean>
+		
+	
+<bean id="q5" class="spring_evln_a.Question_5_class3" factory-method="getobj">
+		</bean>
+		
+		<bean class="spring_evln_a.Question_10_student" id="que10">
+        <property name="std">
+            <map>
+                <entry key="Nikhil" value="80" />
+                <entry key="Payal" value="90" />
+                <entry key="Dipesh" value="95" />
+                <entry key="Pooja" value="85" />
+            </map>
+        </property>
+
+    </bean>
+    <bean id="qu11" class="spring_evln_a.Question_11_res">
+		<constructor-arg value="65"></constructor-arg>
+		<constructor-arg value="90"></constructor-arg>
+		<constructor-arg value="55"></constructor-arg>
+		<constructor-arg value="70"></constructor-arg>
+	</bean>
+
+	<bean id="qu11b" class="spring_evln_a.Question_11_stduent">
+		<constructor-arg value="chinmay"></constructor-arg>
+		<constructor-arg value="312"></constructor-arg>
+		<constructor-arg value="11-02-1998"></constructor-arg>
+		<constructor-arg value="MCA"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+		<constructor-arg>
+			<ref bean="qu11" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="qu11c" class="spring_evln_a.Question_11_res">
+		<constructor-arg value="60"></constructor-arg>
+		<constructor-arg value="78"></constructor-arg>
+		<constructor-arg value="57"></constructor-arg>
+		<constructor-arg value="35"></constructor-arg>
+
+	</bean>
+	<bean id="qu11d" class="spring_evln_a.Question_11_stduent">
+		<constructor-arg value="aditi"></constructor-arg>
+		<constructor-arg value="301"></constructor-arg>
+		<constructor-arg value="7-5-98"></constructor-arg>
+		<constructor-arg value="MCA"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+		<constructor-arg>
+			<ref bean="qu11c" />
+		</constructor-arg>
+	</bean>
+	
+	
+	</beans>
+
